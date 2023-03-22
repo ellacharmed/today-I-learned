@@ -1,0 +1,17 @@
+format: jb-book
+root: intro
+chapters:
+- file: markdown
+- file: notebooks
+- file: markdown-notebooks
+- file: errors
+- file: fundamentals/git
+  sections:
+  - file: fundamentals/swe
+- file: jupyter-book/howto-dosomething
+- file: machinelearning/classification
+  sections:
+  - file: machinelearning/regression
+- file: python/atopic
+  sections:
+  - file: python/oop
