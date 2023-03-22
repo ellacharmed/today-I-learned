@@ -99,6 +99,8 @@ And to use myst syntax instead of markdown
 
 So, for my error: `{ref}`experiment-two <experiment-two>`
 
+Source: https://jupyterbook.org/en/stable/reference/cheatsheet.html
+
 [ ] TODO. How to generate .pdf instead of html?
 * [Build a PDF](https://jupyterbook.org/en/stable/advanced/pdf.html)
 * Need to install more packages. Either `pyppeteer` or `texlive`
