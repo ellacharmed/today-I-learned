@@ -141,6 +141,3 @@ dmypy.json
 
 # OSX
 .DS_Store
-
-# jupyter-book
-_build/
