@@ -13,13 +13,9 @@ kernelspec:
   name: python3
 ---
 
-# Welcome to your Jupyter Book
+# Welcome EllaLearns today-i-learned
 
-This is a small sample book to give you a feel for how book content is structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
+A compilation of study notes.
 
 Remember that the Download button to save as `.html` or `.pdf` would "print" only the current html page, not the whole jupyter-book.
 
@@ -99,11 +95,14 @@ And to use myst syntax instead of markdown
 
 So, for my error: `{ref}`experiment-two <experiment-two>`
 
+Source: https://jupyterbook.org/en/stable/reference/cheatsheet.html
+
 [ ] TODO. How to generate .pdf instead of html?
 * [Build a PDF](https://jupyterbook.org/en/stable/advanced/pdf.html)
 * Need to install more packages. Either `pyppeteer` or `texlive`
   * [pyppeteer](https://github.com/pyppeteer/pyppeteer)
   * [texlive](https://www.tug.org/texlive/)
 
+## Table of Contents
 ```{tableofcontents}
 ```
