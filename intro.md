@@ -75,6 +75,42 @@ _note_: ToDos need to be
 
 before it is gathered by the TODO extension in a tree
 
+## Experiment Three
+
+* renumbered folders with prefixes to folder name to the desired order of appearance
+* made a landing page for Topics 0 & 1
+* result in some errors as not all folders and files are in _toc.yml
+
+```yaml
+format: jb-book
+root: intro
+chapters:
+- file: 0_Jupyter-book/landing
+  sections:
+  - file: 0_Jupyter-book/sample_intro
+  - file: 0_Jupyter-book/jb commands
+  - file: 0_Jupyter-book/sample markdown-notebook
+  - file: 0_Jupyter-book/sample markdown
+  - file: 0_Jupyter-book/sample notebooks
+  - file: 0_Jupyter-book/errors
+- file: 1_Fundamentals/landing
+  sections:
+  - file: 1_Fundamentals/git
+  - file: 1_Fundamentals/swe
+- file: 2_Python/atopic
+  sections:
+  - file: 2_Python/oop
+- file: 4_Machine Learning/classification
+  sections:
+  - file: 4_Machine Learning/regression
+```
+
+### Results
+
+Looking good! Understood the structure and desired naming conventions now.
+
+![experiment3-result](images/experiment3-result.png)
+
 ## Questions
 
 [x] TODO, if want to convert one markdown file or several files into an `article`, how do I go about doing that?
