@@ -1,14 +1,14 @@
----
+<!-- ---
 id: 20230226130334
 title: "100 Page Machine Learning Book"
 subtitle: 
 author: Andriy Burkov
 created: 2023-02-26
 keywords: book, machine-learning
----
+--- -->
 
 # 100 Page Machine Learning Book
-source: [Book’s Wiki page](theMLbook.com)
+source: [Book’s Wiki page](https://theMLbook.com)
 github: [Code for Illustrations in book](https://github.com/aburkov/theMLbook)
 
 (page xvii) Preface. 

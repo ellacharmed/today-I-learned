@@ -1,16 +1,3 @@
----
-id: 20220912123026
-title: "Practice
-"
-subtitle: 
-created: 2022-09-12
-modified: CURRENT_YEAR:-CURRENT_MONTH:-CURRENT_DATE:
-author: [[]] link to author page if maintaining separate note on author
-source: 
-keywords: 
----
-
-
 # Practice
 
 ## Python

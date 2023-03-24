@@ -1,15 +1,3 @@
----
-id: 20220827150910
-title: "Python resources"
-subtitle:  free courses better than paid for ones
-created: 2022-08-27
-modified: CURRENT_YEAR:-CURRENT_MONTH:-CURRENT_DATE:
-author: Python Programmer
-source: https://www.youtube.com/watch?v=kCHkxekTyVE
-keywords: #free-python-resources
----
-
-
 # Python resources
 
 ## # These 9 free courses are better than most paid for ones | Data Science & Machine Learning

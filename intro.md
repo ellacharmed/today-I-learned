@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Welcome EllaLearns today-i-learned
+# Welcome to EllaLearns
 
 A compilation of study notes.
 
@@ -61,11 +61,8 @@ chapters:
 
 ## Experiment Two
 
-[ ] TODO. Need to figure out how to do .md files as links and not in Topic.
-[ ] TODO. Using numbering, so content is sorted in the order I want.
-
-## Next Actions
-
+[x] TODO. Need to figure out how to do .md files as links and not in Topic.
+[x] TODO. Using numbering, so content is sorted in the order I want.
 [x] TODO. Set up as git repo before doing `{ref}`experiment-two <experiment-two>`. I want to keep the different versions of the _toc without numbering them manually. But then cannot access each file unless I switch to that branch... Hmmm. Maybe manual numbering and then commit each experiments as an atomic change instead of in separate branches.
 
 _note_: ToDos need to be
@@ -85,24 +82,44 @@ before it is gathered by the TODO extension in a tree
 format: jb-book
 root: intro
 chapters:
+- file: README
 - file: 0_Jupyter-book/landing
   sections:
-  - file: 0_Jupyter-book/sample_intro
-  - file: 0_Jupyter-book/jb commands
-  - file: 0_Jupyter-book/sample markdown-notebook
-  - file: 0_Jupyter-book/sample markdown
-  - file: 0_Jupyter-book/sample notebooks
+  - file: 0_Jupyter-book/commands
   - file: 0_Jupyter-book/errors
+  - file: 0_Jupyter-book/sample intro
+  - file: 0_Jupyter-book/sample markdown
+  - file: 0_Jupyter-book/sample markdown-notebooks
+  - file: 0_Jupyter-book/sample notebooks.ipynb
 - file: 1_Fundamentals/landing
   sections:
-  - file: 1_Fundamentals/git
-  - file: 1_Fundamentals/swe
-- file: 2_Python/atopic
+  - file: 1_Fundamentals/0_swe
+  - file: 1_Fundamentals/1_git
+- file: 2_Python/landing
   sections:
+  - file: 2_Python/atopic
   - file: 2_Python/oop
-- file: 4_Machine Learning/classification
+- file: 4_Machine Learning/landing 
   sections:
-  - file: 4_Machine Learning/regression
+  - file: 4_Machine Learning/0_Python resources
+  - file: 4_Machine Learning/0_ML resources
+  - file: 4_Machine Learning/0_How to Learn ML  
+  - file: 4_Machine Learning/1_classification
+  - file: 4_Machine Learning/2_regression
+  - file: 4_Machine Learning/WWCode NLP Workshop
+- file: 9_Books/landing
+  sections:
+  - file: 9_Books/Burkov, Hundred Page Machine Learning Book
+  - file: 9_Books/Burkov, Machine Learning Engineering
+- file: 9_Courses/landing
+  sections:
+  - file: 9_Courses/cs50-path
+  - file: 9_Courses/scikit-learn-mooc
+- file: 9_Practicals/landing
+  sections:
+  - file: 9_Practicals/Practice
+  - file: 9_Practicals/Predict AIAP timeline
+  - file: 9_Practicals/titanic-dataset
 ```
 
 ### Results
@@ -111,7 +128,7 @@ Looking good! Understood the structure and desired naming conventions now.
 
 ![experiment3-result](images/experiment3-result.png)
 
-## Questions
+## Questions / Next Actions
 
 [x] TODO, if want to convert one markdown file or several files into an `article`, how do I go about doing that?
 * see [Build an article from a single file](https://jupyterbook.org/en/stable/structure/toc.html#structure-of-an-article)

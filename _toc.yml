@@ -1,21 +1,41 @@
 format: jb-book
 root: intro
 chapters:
+- file: README
 - file: 0_Jupyter-book/landing
   sections:
-  - file: 0_Jupyter-book/sample_intro
-  - file: 0_Jupyter-book/jb commands
-  - file: 0_Jupyter-book/sample markdown-notebook
-  - file: 0_Jupyter-book/sample markdown
-  - file: 0_Jupyter-book/sample notebooks
+  - file: 0_Jupyter-book/commands
   - file: 0_Jupyter-book/errors
+  - file: 0_Jupyter-book/sample intro
+  - file: 0_Jupyter-book/sample markdown
+  - file: 0_Jupyter-book/sample markdown-notebooks
+  - file: 0_Jupyter-book/sample notebooks.ipynb
 - file: 1_Fundamentals/landing
   sections:
-  - file: 1_Fundamentals/git
-  - file: 1_Fundamentals/swe
-- file: 2_Python/atopic
+  - file: 1_Fundamentals/0_swe
+  - file: 1_Fundamentals/1_git
+- file: 2_Python/landing
   sections:
+  - file: 2_Python/atopic
   - file: 2_Python/oop
-- file: 4_Machine Learning/classification
+- file: 4_Machine Learning/landing 
   sections:
-  - file: 4_Machine Learning/regression
+  - file: 4_Machine Learning/0_Python resources
+  - file: 4_Machine Learning/0_ML resources
+  - file: 4_Machine Learning/0_How to Learn ML  
+  - file: 4_Machine Learning/1_classification
+  - file: 4_Machine Learning/2_regression
+  - file: 4_Machine Learning/WWCode NLP Workshop
+- file: 9_Books/landing
+  sections:
+  - file: 9_Books/Burkov, Hundred Page Machine Learning Book
+  - file: 9_Books/Burkov, Machine Learning Engineering
+- file: 9_Courses/landing
+  sections:
+  - file: 9_Courses/cs50-path
+  - file: 9_Courses/scikit-learn-mooc
+- file: 9_Practicals/landing
+  sections:
+  - file: 9_Practicals/Practice
+  - file: 9_Practicals/Predict AIAP timeline
+  - file: 9_Practicals/titanic-dataset
