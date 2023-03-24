@@ -1,16 +1,11 @@
 format: jb-book
 root: intro
 chapters:
-- file: README
 - file: 0_Jupyter-book/landing
   sections:
   - file: 0_Jupyter-book/commands
   - file: 0_Jupyter-book/errors
   - file: 0_Jupyter-book//how to by Chris Holdgraf
-  - file: 0_Jupyter-book/sample intro
-  - file: 0_Jupyter-book/sample markdown
-  - file: 0_Jupyter-book/sample markdown-notebooks
-  - file: 0_Jupyter-book/sample notebooks.ipynb
 - file: 1_Fundamentals/landing
   sections:
   - file: 1_Fundamentals/0_swe
