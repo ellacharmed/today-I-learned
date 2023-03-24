@@ -5,7 +5,7 @@ chapters:
   sections:
   - file: 0_Jupyter-book/commands
   - file: 0_Jupyter-book/errors
-  - file: 0_Jupyter-book//how to by Chris Holdgraf
+  - file: 0_Jupyter-book/how to by Chris Holdgraf
 - file: 1_Fundamentals/landing
   sections:
   - file: 1_Fundamentals/0_swe
@@ -33,5 +33,4 @@ chapters:
 - file: 9_Practicals/landing
   sections:
   - file: 9_Practicals/Practice
-  - file: 9_Practicals/Predict AIAP timeline
   - file: 9_Practicals/titanic-dataset
