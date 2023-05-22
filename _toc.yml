@@ -6,14 +6,19 @@ chapters:
   - file: 0_Jupyter-book/commands
   - file: 0_Jupyter-book/errors
   - file: 0_Jupyter-book/how to by Chris Holdgraf
-- file: 1_Fundamentals/landing
+- file: 1_Meta/landing
   sections:
-  - file: 1_Fundamentals/0_swe
-  - file: 1_Fundamentals/1_git
-- file: 2_Python/landing
+  - file: 1_Meta/0_LearningHowToLearn
+  - file: 1_Meta/1_ReturnToStudyHandbook
+- file: 2_Fundamentals/landing
   sections:
-  - file: 2_Python/atopic
-  - file: 2_Python/oop
+  - file: 2_Fundamentals/0_swe
+  - file: 2_Fundamentals/1_git
+  - file: 2_Fundamentals/move_wsl_distro
+- file: 3_Python/landing
+  sections:
+  - file: 3_Python/atopic
+  - file: 3_Python/oop
 - file: 4_Machine Learning/landing 
   sections:
   - file: 4_Machine Learning/0_Python resources
