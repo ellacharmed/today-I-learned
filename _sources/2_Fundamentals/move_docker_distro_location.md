@@ -79,6 +79,8 @@ COMMAND `mklink /j <source/path/to/link/from> <target/path/to/link/to>`
 
 4. Open an elevated command prompt (ie with Administrator priviliges), using `CTRL+Click` (in image below). Also take note of the Important Notes above. My target path is in my `E:\` drive. Copy+paste the commands one line at a time.
 
+![WindowsTerminal 0523-1110 (2)](https://github.com/ellacharmed/today-I-learned/assets/6437860/8b57e980-d009-4201-991c-6e4807984a65)
+
 Doing the Program files,
 ```bash
 mklink /D "C:\ProgramData\Docker" "E:\docker\programdata\docker"
@@ -152,9 +154,12 @@ You may not have other distros, if you haven't installed them in WSL before. So 
 `docker run hello-world`
 
 ```{note}
-If you prefer using the GUI client of the Docker Desktop, you can also do this from the search bar in Docker Desktop (look for the `CTRL+K` button and type hello-world). 
+If you prefer using the GUI client of the Docker Desktop, you can also do this from the search bar in Docker Desktop (look for the `CTRL+K` button). 
+
+Type hello-world in the search bar, go to the Images tab, and then click on the image, if not already selected, and finally click on the Run button.
 ```
+![Docker_Desktop 0523-1107](https://github.com/ellacharmed/today-I-learned/assets/6437860/2063ac81-789b-48bd-aa90-ac5746e28ef5)
 
 The result is the same either way, Docker would perform the steps it outlines. And now you can try other containers/images.
 
-
+![Docker_Desktop 0523-1108](https://github.com/ellacharmed/today-I-learned/assets/6437860/9d394f35-3409-4adc-8bf5-545a90f77352)
