@@ -1,4 +1,4 @@
-# Compilation
+# jb Commands Compilation
 
 Compilation of commands and notes on how-to use jupyter-book
 
@@ -7,14 +7,17 @@ Compilation of commands and notes on how-to use jupyter-book
 ## Generate _toc.yml
 
 Using `base` venv,
-`jupyter-book toc from-project today-i-learned -f jb-book`
+`jupyter-book toc from-project today-I-learned -f jb-book`
+`jb toc from-project . -f jb-book`
 
 ### Build the book
 
 From the parent of the book ie from outside the `<book-to-be-build>` directory, 
-`jupyter-book build today-i-learned/`
+`jupyter-book build today-I-learned/`
 or
-`jb jupyter-book build today-i-learned/`
+`jb build today-I-learned/`
+or 
+`jb build .`
 
 Result: some errors:
 ```
@@ -60,6 +63,12 @@ Options:
   -h, --help            show this help message and exit
 ```
 
+### Build to PDF (whole book)
+
+from outside `today-I-learned/` use 
+`jb build today-I-learned/ --builder pdflatex`
+
+or `jb build . --builder pdflatex`
 
 ## Next actions
 
