@@ -5,7 +5,7 @@
 Caveat to using gh-pages: `main` repo must be public. 
 
 1. Generate toc `jupyter-book toc from-project . > _toc.yml`
-1. Remove sections from _toc to be kept private (sensitive data or private projects)
+1. Remove sections from _toc to be kept private (confidential, sensitive data or private projects)
 1. Build book `jb build .`
 1. Push to gh-pages `ghp-import -n -p -f _build/html/`
 
