@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # today-I-learned
 
 Notes of lessons as I attempt to qualify for AIAP, using jupyter-book.
@@ -45,9 +60,9 @@ chapters:
 
 ## Experiment Two
 
-[x] TODO. Need to figure out how to do .md files as links and not in Topic.
-[x] TODO. Using numbering, so content is sorted in the order I want.
-[x] TODO. Set up as git repo before doing `{ref}`experiment-two <experiment-two>`. I want to keep the different versions of the _toc without numbering them manually. But then cannot access each file unless I switch to that branch... Hmmm. Maybe manual numbering and then commit each experiments as an atomic change instead of in separate branches.
+[x] Need to figure out how to do .md files as links and not in Topic.
+[x] Using numbering, so content is sorted in the order I want.
+[x] Set up as git repo before doing `{ref}`experiment-two <experiment-two>`. I want to keep the different versions of the _toc without numbering them manually. But then cannot access each file unless I switch to that branch... Hmmm. Maybe manual numbering and then commit each experiments as an atomic change instead of in separate branches.
 
 _note_: ToDos need to be
 
@@ -114,10 +129,10 @@ Looking good! Understood the structure and desired naming conventions now.
 
 ## Questions / Next Actions
 
-[x] TODO, if want to convert one markdown file or several files into an `article`, how do I go about doing that?
+[x] If want to convert one markdown file or several files into an `article`, how do I go about doing that?
 * see [Build an article from a single file](https://jupyterbook.org/en/stable/structure/toc.html#structure-of-an-article)
 
-[x] TODO. Is `myst` errors due to some missing package?
+[x] Is `myst` errors due to some missing package?
 
 It was perhaps because `_config.yml` was renamed to `_config_v0.yml`. Made a copy with my edits. No more errors.
 
@@ -134,8 +149,13 @@ So, for my error: `{ref}`experiment-two <experiment-two>`
 
 Source: https://jupyterbook.org/en/stable/reference/cheatsheet.html
 
-[ ] TODO. How to generate .pdf instead of html?
+[x] How to generate .pdf instead of html?
 * [Build a PDF](https://jupyterbook.org/en/stable/advanced/pdf.html)
 * Need to install more packages. Either `pyppeteer` or `texlive`
   * [pyppeteer](https://github.com/pyppeteer/pyppeteer)
   * [texlive](https://www.tug.org/texlive/)
+
++++
+
+* Installed `texlive` in {base} miniconda env
+* Don't think there was other config steps beyond installing

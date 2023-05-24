@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # How to Learn ML
 
 ## Videos
@@ -71,9 +86,6 @@
 ## Not Python but .... 
 Andrew Ng Machine Learning - [https://www.coursera.org/learn/machin...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDBlcUtnYjI1X0RwemxXR2JudGtrT19LQndoUXxBQ3Jtc0ttMnpmcGQ2cDJjc2lhQ0VxaUVwV1hUbThRdlEtdDVKRFppY3pDU216VmdFNTNXTlVMTE92NDNFanVoc0hBLXZZcERCenR0Qk52NVlrUTJrSTZnR1JMdXBIQmJBUnhORmJESF92bHlYMmh6NGxGdDhFVQ&q=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fmachine-learning&v=itzmu0l93wM) (amazon links are affiliate links - you won’t pay any more for the product, but I will receive a small percentage of the purchase price)
 
-
++++
 
 ## Blog posts
-
-
-

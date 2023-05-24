@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # jb Commands Compilation
 
 Compilation of commands and notes on how-to use jupyter-book
@@ -7,20 +22,28 @@ Compilation of commands and notes on how-to use jupyter-book
 ## Generate _toc.yml
 
 Using `base` venv,
+
 `jupyter-book toc from-project today-I-learned -f jb-book`
+
 `jb toc from-project . -f jb-book`
 
-### Build the book
+## Build the book
 
 From the parent of the book ie from outside the `<book-to-be-build>` directory, 
+
 `jupyter-book build today-I-learned/`
+
 or
+
 `jb build today-I-learned/`
+
 or 
+
 `jb build .`
 
 Result: some errors:
-```
+
+```{error}
 /Users/ellaair/MEGA/2 Projects/jupyterbook/today-i-learned/markdown.md:39: ERROR: Unknown interpreted text role "cite".
 /Users/ellaair/MEGA/2 Projects/jupyterbook/today-i-learned/markdown.md:49: ERROR: Unknown directive type "bibliography".
 /Users/ellaair/MEGA/2 Projects/jupyterbook/today-i-learned/notebooks.ipynb: WARNING: Executing notebook failed: CellExecutionError [mystnb.exec]
@@ -31,13 +54,16 @@ Result: some errors:
 
 Caveat to using gh-pages: repo must be public. Link to [ellalearns book](https://ellacharmed.github.io/today-I-learned/intro.html)
 
-```bash
+For a new book, execute following snippet in terminal.
+```{tip}
 pip install ghp-import
 ghp-import -n -p -f _build/html/
 ```
 
 `ghp-import` will push to gh-pages branch in the current repo
+
 From the PyPi docs of this package
+
 ```
 Usage: ghp-import [OPTIONS] DIRECTORY
 
@@ -63,13 +89,14 @@ Options:
   -h, --help            show this help message and exit
 ```
 
-### Build to PDF (whole book)
+## Build to PDF (whole book)
 
 from outside `today-I-learned/` use 
 `jb build today-I-learned/ --builder pdflatex`
 
-or `jb build . --builder pdflatex`
+from within book folder
+`jb build . --builder pdfhtml` or `jb build . --builder pdflatex`
 
 ## Next actions
 
-[x] TODO. Change `yml` to `yaml` in `intro.md`
+[x] Change `yml` to `yaml` in `intro.md`

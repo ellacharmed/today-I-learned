@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 <!-- ---
 id: 20230226130334
 title: "100 Page Machine Learning Book"
@@ -27,6 +42,7 @@ It is now the accepted term to mean a sub-field of Artificial Intelligence in th
 (page 77)
 [extended resource on hypperparameter tuning](http://themlbook.com/wiki/doku.php?id=hyperparameter_tuning)
 
++++
 
 ## Books by Andriy Burkov
 

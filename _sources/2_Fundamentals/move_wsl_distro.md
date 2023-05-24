@@ -13,7 +13,6 @@ kernelspec:
   name: python3
 ---
 
-
 # Move location of distro in WSL2
 
 Date tested: 2023.05.20
@@ -142,4 +141,3 @@ The operation completed successfully.
 ```
 
 ![explorer 0521-1096](https://github.com/ellacharmed/today-I-learned/assets/6437860/997de7d3-8476-41f6-a7a2-da545e61af48)
-

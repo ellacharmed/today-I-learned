@@ -1,7 +1,23 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # Python resources
 
 ## # These 9 free courses are better than most paid for ones | Data Science & Machine Learning
 
++++
 
 Here are the courses mentioned:
 - [https://docs.microsoft.com/en-us/learn/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbGF2OUIwQ2k1UVR3aXhwQ1ZibVNoQUpvcXBRd3xBQ3Jtc0trT1RWVlQtUnU5Sk42NV9wcFhDZzN4TDJoYk43YkRub2pxOTVkU1k0WjNocnlSYV9ObW0tRW5NbmdYNU5qcFZ6MTdtbDNuQ2x6N2FsVjNfWlNtMGxUZkNFVnVzdlViUW1RNGxsMEM4TUY1OXV1V2k5TQ&q=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Flearn%2F&v=kCHkxekTyVE)  

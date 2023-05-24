@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '0_Jupyter-book/jupyterbook-vs';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Welcome to your Jupyter Book" href="sample%20intro.html" />
+    <link rel="next" title="How to add notes in Margins" href="marginalia.html" />
     <link rel="prev" title="How to Guides by Dr Chris Holdgraf" href="how%20to%20by%20Chris%20Holdgraf.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -164,10 +164,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="errors.html">Errors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="how%20to%20by%20Chris%20Holdgraf.html">How to Guides by Dr Chris Holdgraf</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">JupyterBook vs READMEs vs Wikis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marginalia.html">How to add notes in Margins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample%20intro.html">Welcome to your Jupyter Book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample%20markdown.html">Markdown Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample%20markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample%20notebooks.html">Content with notebooks</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1_Meta/index.html">Meta</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -178,10 +178,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2_Fundamentals/index.html">Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/0_swe.html">Software Engineering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/1_git.html">Git and Github</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/folderStructure.html">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/folder_structure.html">Folder Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/move_docker_distro_location.html">Move location of Docker containers in WSL2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/move_wsl_distro.html">Move location of distro in WSL2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/Sharing%20Data.html">Sharing data across notebooks, scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/sharing_data.html">Sharing data across notebooks, scripts</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../3_Python/index.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -218,9 +218,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/pandas-to-polars.html">pandas-to-polars Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/Practice.html">Practice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/titanic-dataset.html">Titanic-dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../9_Practicals/Brownlee%2C%20Multi-Class%20Imbalanced%20Classification.html">Multi-Class Imbalanced Classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../9_Practicals/imbalanced.html">SMOTE for Imbalanced Classification with Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../9_Practicals/AI4I-2-Q.html">AI4I Quiz 2</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../11_Articles/index.html">Articles</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -422,6 +419,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-readmes">About READMEs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-wikis">About Wikis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ways-of-linking-in-jupyterbook">Ways of linking in jupyterbook</a></li>
 </ul>
             </nav>
         </div>
@@ -435,23 +433,41 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="jupyterbook-vs-readmes-vs-wikis">
 <h1>JupyterBook vs READMEs vs Wikis<a class="headerlink" href="#jupyterbook-vs-readmes-vs-wikis" title="Permalink to this heading">#</a></h1>
+<p>Initially this book’s contents exist in my Zettelkasten vault in Zettlr and I’d place the “<em>vault</em>” folder in the cloud so as long as I have access to internet, I can sync the contents and access it from PC, Mac, or mobile while out an about.</p>
+<p>And then, I decided to do <a class="reference external" href="https://twitter.com/search?q=from%3Aellacharm3d%20(%23100DaysOfMLCode%20OR%20%23MachineLearning)&amp;src=typed_query&amp;f=live">#100DaysofMLCode</a> and realized markdown files with fenced code snippets cannot be run like in vscode. Well, DUH!</p>
+<p>And so the journey began to research a different way of doing things, and I came across jupyter-book.
+What’s funny was, while going down the rabbithole of this research, someone on Telegram also gave me a suggestion on how I can better document my <strong>100 Days project</strong> as I was lamenting to that study group that as I’m not a verified Twitter account, I’m restricted to short-form tweets and some content really needs to be in the form of a blog post.</p>
 <section id="about-readmes">
 <h2>About READMEs<a class="headerlink" href="#about-readmes" title="Permalink to this heading">#</a></h2>
-<p>You can add a README file to a repository to communicate important information about your project. A README, along with a repository license, citation file, contribution guidelines, and a code of conduct, communicates expectations for your project and helps you manage contributions.</p>
-<p>For more information about providing guidelines for your project, see “Adding a code of conduct to your project” and “Setting up your project for healthy contributions.”</p>
-<p>A README is often the first item a visitor will see when visiting your repository. README files typically include information on:</p>
-<ul class="simple">
-<li><p>What the project does</p></li>
-<li><p>Why the project is useful</p></li>
-<li><p>How users can get started with the project</p></li>
-<li><p>Where users can get help with your project</p></li>
-<li><p>Who maintains and contributes to the project</p></li>
-</ul>
+<p><a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">source</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>You can add a README file to a repository to communicate important information about your project. A README, along with a repository license, citation file, contribution guidelines, and a code of conduct, communicates expectations for your project and helps you manage contributions.
+
+For more information about providing guidelines for your project, see &quot;Adding a code of conduct to your project&quot; and &quot;Setting up your project for healthy contributions.&quot;
+
+A README is often the first item a visitor will see when visiting your repository. README files typically include information on:
+
+* What the project does
+* Why the project is useful
+* How users can get started with the project
+* Where users can get help with your project
+* Who maintains and contributes to the project
+</pre></div>
+</div>
 </section>
 <section id="about-wikis">
 <h2>About Wikis<a class="headerlink" href="#about-wikis" title="Permalink to this heading">#</a></h2>
-<p>Search engines will not index the contents of wikis. To have your content indexed by search engines, you can use GitHub Pages in a public repository.</p>
 <p><a class="reference external" href="https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis">source</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Search engines will not index the contents of wikis. To have your content indexed by search engines, you can use GitHub Pages in a public repository.
+</pre></div>
+</div>
+</section>
+<section id="ways-of-linking-in-jupyterbook">
+<h2>Ways of linking in jupyterbook<a class="headerlink" href="#ways-of-linking-in-jupyterbook" title="Permalink to this heading">#</a></h2>
+<p>jupyterbook’s</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/references.html">references content page</a></p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/tutorials/references.html">references tutorial page</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -496,11 +512,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="sample%20intro.html"
+       href="marginalia.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">How to add notes in Margins</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -524,6 +540,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-readmes">About READMEs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-wikis">About Wikis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ways-of-linking-in-jupyterbook">Ways of linking in jupyterbook</a></li>
 </ul>
   </nav></div>
 

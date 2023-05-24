@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # Folder Structure
 
 Some ideas from following on how to organize the folder and files for an ML project
@@ -10,7 +25,8 @@ Some ideas from following on how to organize the folder and files for an ML proj
 
 
 
-The simplest is `mlskeleton`:
+The simplest is `ml-skeleton`:
+
 ```bash
 project_name/
 |
@@ -77,6 +93,7 @@ project_name/
 |- requirements.txt
 |- README.md
 ```
+
 Explanation:
 
 - **`data`**: This folder should contain all the data required for the project, both raw and processed. It is a good idea to keep the raw data separate from the processed data to make it clear which data has been transformed in some way and how.
@@ -93,4 +110,3 @@ Explanation:
 - **`.gitignore`**: This file should contain a list of file and folder names that should be ignored by Git (e.g. large data files that should not be committed to the repository).
 - **`requirements.txt`**: This file should contain a list of the libraries and packages required to run the code in the project, so that they can be easily installed by someone else who wants to run the code.
 - **`README.md`**: This file should contain a brief description of the project and instructions for how to set up and run the code.
-

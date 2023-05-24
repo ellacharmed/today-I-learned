@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # Practice
 
 ## Python
@@ -7,6 +22,7 @@
 
 ## Pandas
 
++++
 
 ## Plotly
 
@@ -20,6 +36,6 @@ https://www.skillshare.com/classes/Data-Visualization-Essentials-with-Plotly-and
 * Considering the attached [Historical Price for Gold](https://drive.google.com/file/d/1UwAkll3MIsalrHKpVdtDixqUZyuDdriF/view?usp=sharing), read the CSV file with Pandas (or using plain Python) and then create an interactive Line Chart using Plotly.
     * /AISG/Data/gold_annual_price.csv.zip
 
++++
 
 ## sklearn
-

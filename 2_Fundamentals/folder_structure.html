@@ -61,7 +61,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2_Fundamentals/folderStructure';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2_Fundamentals/folder_structure';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Move location of Docker containers in WSL2" href="move_docker_distro_location.html" />
@@ -164,10 +164,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/errors.html">Errors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/how%20to%20by%20Chris%20Holdgraf.html">How to Guides by Dr Chris Holdgraf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/jupyterbook-vs.html">JupyterBook vs READMEs vs Wikis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/marginalia.html">How to add notes in Margins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20intro.html">Welcome to your Jupyter Book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20markdown.html">Markdown Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20notebooks.html">Content with notebooks</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1_Meta/index.html">Meta</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Folder Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="move_docker_distro_location.html">Move location of Docker containers in WSL2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="move_wsl_distro.html">Move location of distro in WSL2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sharing%20Data.html">Sharing data across notebooks, scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing_data.html">Sharing data across notebooks, scripts</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../3_Python/index.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -218,9 +218,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/pandas-to-polars.html">pandas-to-polars Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/Practice.html">Practice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/titanic-dataset.html">Titanic-dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../9_Practicals/Brownlee%2C%20Multi-Class%20Imbalanced%20Classification.html">Multi-Class Imbalanced Classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../9_Practicals/imbalanced.html">SMOTE for Imbalanced Classification with Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../9_Practicals/AI4I-2-Q.html">AI4I Quiz 2</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../11_Articles/index.html">Articles</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -298,7 +295,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/ellacharmed/today-I-learned/issues/new?title=Issue%20on%20page%20%2F2_Fundamentals/folderStructure.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ellacharmed/today-I-learned/issues/new?title=Issue%20on%20page%20%2F2_Fundamentals/folder_structure.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +325,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/2_Fundamentals/folderStructure.md" target="_blank"
+      <li><a href="../_sources/2_Fundamentals/folder_structure.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -432,7 +429,7 @@ document.write(`
 <li><p><a class="reference external" href="https://goodresearch.dev/setup.html#create-a-project-skeleton">Mineault’s CodeBook</a></p></li>
 <li><p><a class="reference external" href="https://docs.kedro.org/en/stable/index.html">kedro</a></p></li>
 </ul>
-<p>The simplest is <code class="docutils literal notranslate"><span class="pre">mlskeleton</span></code>:</p>
+<p>The simplest is <code class="docutils literal notranslate"><span class="pre">ml-skeleton</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>project_name/
 <span class="p">|</span>
 <span class="p">|</span>-<span class="w"> </span>data/

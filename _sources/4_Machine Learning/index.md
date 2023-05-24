@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # Machine Learning
 
 ## Synopsis
@@ -18,4 +33,3 @@ This chapter collects all the information on Machine Learning
   * Omegaconf
     * Hydra: ArjanCodes [Configuration Management For Data Science Made Easy With Hydra](https://youtu.be/tEsPyYnzt8s)
   * box and strip plots?
-

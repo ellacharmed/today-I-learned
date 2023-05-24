@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # feature importances
 
 The following classifiers in scikit-learn have the feature_importances_ attribute:
@@ -25,7 +40,7 @@ Source: Conversation with Bing, 07/05/2023
 
 Certainly! Here is an example code that uses permutation_importance with the classifiers that support this:
 
-```python
+```{code-cell}
 from sklearn.datasets import make_classification
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.inspection import permutation_importance
@@ -47,10 +62,11 @@ Source: Conversation with Bing, 07/05/2023
 (3) scikit-learn - sklearn.inspection.permutation_importance Permutation .... https://runebook.dev/en/docs/scikit_learn/modules/generated/sklearn.inspection.permutation_importance.
 (4) 4.2. Permutation feature importance - scikit-learn. https://scikit-learn.org/stable/modules/permutation_importance.html.
 
++++
 
 Sure! Here's an example code that plots the feature importance scores:
 
-```python
+```{code-cell}
 import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots()

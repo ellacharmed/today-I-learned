@@ -1,3 +1,18 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.14.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 # Accelerated Learning for the 21st Century
 
 Author: Colin Rose
@@ -22,4 +37,4 @@ not the no of brain cells but brain connections - synapses, dendrites
 
 - how does it differ or support Dr Barbara Oakley (Coursera course + Books of similar topic)?
 - also reading book from NLB; title: TODO
-- 
+-

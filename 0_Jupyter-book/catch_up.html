@@ -164,10 +164,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="errors.html">Errors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="how%20to%20by%20Chris%20Holdgraf.html">How to Guides by Dr Chris Holdgraf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="jupyterbook-vs.html">JupyterBook vs READMEs vs Wikis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marginalia.html">How to add notes in Margins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample%20intro.html">Welcome to your Jupyter Book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample%20markdown.html">Markdown Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sample%20markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sample%20notebooks.html">Content with notebooks</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1_Meta/index.html">Meta</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -178,10 +178,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2_Fundamentals/index.html">Fundamentals</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/0_swe.html">Software Engineering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/1_git.html">Git and Github</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/folderStructure.html">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/folder_structure.html">Folder Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/move_docker_distro_location.html">Move location of Docker containers in WSL2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/move_wsl_distro.html">Move location of distro in WSL2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/Sharing%20Data.html">Sharing data across notebooks, scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/sharing_data.html">Sharing data across notebooks, scripts</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../3_Python/index.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -218,9 +218,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/pandas-to-polars.html">pandas-to-polars Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/Practice.html">Practice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/titanic-dataset.html">Titanic-dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../9_Practicals/Brownlee%2C%20Multi-Class%20Imbalanced%20Classification.html">Multi-Class Imbalanced Classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../9_Practicals/imbalanced.html">SMOTE for Imbalanced Classification with Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../9_Practicals/AI4I-2-Q.html">AI4I Quiz 2</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../11_Articles/index.html">Articles</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -421,10 +418,16 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-to-github-pages">publish to github pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-whole-book-to-pdf">build whole book to PDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-a-single-page-to-pdf">build a single page to PDF</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#book-vs-article">book vs article</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-toc-yml">the _toc.yml</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-config-yml">the _config.yml</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-yaml-metadata-to-myst-notebooks">add yaml metadata to MySt notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#show-my-linked-brain-or-not">show my linked-brain, or not</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-jupyter-book">Why jupyter-book?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-notes-in-margins">How to add notes in Margins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-references">How to add references</a></li>
 </ul>
             </nav>
         </div>
@@ -440,7 +443,7 @@ document.write(`
 <h1>Summary of important jb concepts<a class="headerlink" href="#summary-of-important-jb-concepts" title="Permalink to this heading">#</a></h1>
 <section id="publish-to-github-pages">
 <h2>publish to github pages<a class="headerlink" href="#publish-to-github-pages" title="Permalink to this heading">#</a></h2>
-<p>Caveat to using gh-pages: <code class="docutils literal notranslate"><span class="pre">main</span></code> repo must be public.</p>
+<p>Caveat to using gh-pages: <code class="docutils literal notranslate"><span class="pre">main</span></code> repo must be public. see [[jb Commands Compilation]]</p>
 <ol class="arabic simple">
 <li><p>Generate toc <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">toc</span> <span class="pre">from-project</span> <span class="pre">.</span> <span class="pre">&gt;</span> <span class="pre">_toc.yml</span></code></p></li>
 <li><p>Remove sections from _toc to be kept private (confidential, sensitive data or private projects)</p></li>
@@ -448,22 +451,36 @@ document.write(`
 <li><p>Push to gh-pages <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html/</span></code></p></li>
 </ol>
 </section>
+<section id="build-whole-book-to-pdf">
+<h2>build whole book to PDF<a class="headerlink" href="#build-whole-book-to-pdf" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>refresh html first by building book from above section</p></li>
+<li><p>then run <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span> <span class="pre">--builder</span> <span class="pre">pdfhtml</span></code></p></li>
+<li><p>because running <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span> <span class="pre">--builder</span> <span class="pre">pdflatex</span></code> means _toc won’t be the edited, sanitized version</p></li>
+</ol>
+</section>
+<section id="build-a-single-page-to-pdf">
+<h2>build a single page to PDF<a class="headerlink" href="#build-a-single-page-to-pdf" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>can do this from website or <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">&lt;path/to/single-file.ext&gt;</span> <span class="pre">--builder</span> <span class="pre">pdflatex</span></code></p></li>
+</ol>
+</section>
 <section id="book-vs-article">
 <h2>book vs article<a class="headerlink" href="#book-vs-article" title="Permalink to this heading">#</a></h2>
 <p>The TOC has a line stating <code class="docutils literal notranslate"><span class="pre">jb-book</span></code> and <code class="docutils literal notranslate"><span class="pre">jb-article</span></code>.</p>
-<ul class="contains-task-list simple">
+<ul class="simple">
 <li><p>How does it know if md is a book or article?</p></li>
 <li><p>How do I format it differently?</p></li>
 <li><p>Is it only for the <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span></code> command? Using a folder for book and file for article.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO The used terms like Chapters and Sections but then the toc has no chapters but section in newer versions.</p></li>
+<li><p>TODO The used terms like Chapters and Sections but then the toc has no chapters but section in newer versions.</p></li>
 </ul>
 </section>
 <section id="the-toc-yml">
 <h2>the _toc.yml<a class="headerlink" href="#the-toc-yml" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>can be autogenerated, but then the <code class="docutils literal notranslate"><span class="pre">excluded-contents</span></code> need to be removed manually</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO is there a way to auto-exclude like .gitignore and .dockerignore?</p></li>
+<ul>
+<li><p>TODO Is there a way to auto-exclude like .gitignore and .dockerignore?</p></li>
 <li><p>docs show {toggle} and other directives for {cell} to be toggle-ble or hidden but not for whole chapters and files. Need more research</p></li>
 </ul>
 </li>
@@ -480,7 +497,38 @@ document.write(`
 </section>
 <section id="add-yaml-metadata-to-myst-notebooks">
 <h2>add yaml metadata to MySt notebooks<a class="headerlink" href="#add-yaml-metadata-to-myst-notebooks" title="Permalink to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">myst</span> <span class="pre">init</span> <span class="pre">path/to/markdownfile.md</span></code></p>
+<ul class="simple">
+<li><p>single file: <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">myst</span> <span class="pre">init</span> <span class="pre">path/to/markdownfile.md</span></code></p></li>
+<li><p>all .md files recursively: <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">myst</span> <span class="pre">init</span> <span class="pre">./*/*.md</span></code></p></li>
+</ul>
+</section>
+<section id="show-my-linked-brain-or-not">
+<h2>show my linked-brain, or not<a class="headerlink" href="#show-my-linked-brain-or-not" title="Permalink to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For graph to work, files need to be connected to each other.</p>
+<p>For connections to happen, need to use links (aka references). See <span class="xref myst"></span></p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">ctrl+shitft+p</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">graph</span></code></p>
+<ul class="simple">
+<li><p>(extension:Markdown Links) no double ‘[[]]’ like ‘[[<filename-in-this-book>]]’</p></li>
+<li><p>(alternative md-graph) has ‘[[]]’</p></li>
+</ul>
+</section>
+<section id="why-jupyter-book">
+<h2>Why jupyter-book?<a class="headerlink" href="#why-jupyter-book" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>[[JupyterBook vs READMEs vs Wikis]]</p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/reference/cheatsheet.html">MySt cheatsheet</a></p></li>
+</ul>
+</section>
+<section id="how-to-add-notes-in-margins">
+<h2>How to add notes in Margins<a class="headerlink" href="#how-to-add-notes-in-margins" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="marginalia.html"><span class="doc std std-doc">How to add notes in Margins</span></a></p>
+</section>
+<section id="how-to-add-references">
+<h2>How to add references<a class="headerlink" href="#how-to-add-references" title="Permalink to this heading">#</a></h2>
+<p><span class="xref myst"></span></p>
 </section>
 </section>
 
@@ -552,10 +600,16 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-to-github-pages">publish to github pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-whole-book-to-pdf">build whole book to PDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-a-single-page-to-pdf">build a single page to PDF</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#book-vs-article">book vs article</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-toc-yml">the _toc.yml</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-config-yml">the _config.yml</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-yaml-metadata-to-myst-notebooks">add yaml metadata to MySt notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#show-my-linked-brain-or-not">show my linked-brain, or not</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-jupyter-book">Why jupyter-book?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-notes-in-margins">How to add notes in Margins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-add-references">How to add references</a></li>
 </ul>
   </nav></div>
 

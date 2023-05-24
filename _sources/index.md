@@ -15,7 +15,7 @@ kernelspec:
 
 # Welcome to EllaLearns
 
-A compilation of study notes of lessons as I attempt to qualify for AIAP, using jupyter-book.
+A compilation of study notes of lessons as I attempt to qualify to [Become an AI Apprentice](https://epoch.aisingapore.org/aiap-field-guide/), using jupyter-book.
 
 Remember that the Download button to save as `.html` or `.pdf` would "print" only the current html page, not the whole jupyter-book.
 
