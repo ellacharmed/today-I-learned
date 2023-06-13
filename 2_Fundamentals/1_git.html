@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Git and Github &#8212; EllaLearns</title>
   
@@ -168,10 +168,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20intro.html">Welcome to your Jupyter Book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20markdown.html">Markdown Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/todo_tree.html">Configuration for TODO extension</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1_Meta/index.html">Meta</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../1_Meta/0_LearningHowToLearn.html">Learning How to Learn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_Meta/mega_glossary.html">Mega glossary of topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../1_Meta/storytelling.html">Storytelling with data</a></li>
 </ul>
 </li>
@@ -179,8 +181,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="0_swe.html">Software Engineering</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Git and Github</a></li>
 <li class="toctree-l2"><a class="reference internal" href="folder_structure.html">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git_worktree.html">Git Worktree according to BingChat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="move_docker_distro_location.html">Move location of Docker containers in WSL2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="move_wsl_distro.html">Move location of distro in WSL2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packaging_packages.html">How to update packages and install locally</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharing_data.html">Sharing data across notebooks, scripts</a></li>
 </ul>
 </li>
@@ -197,6 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../4_Machine%20Learning/1_classification.html">Classification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4_Machine%20Learning/2_regression.html">Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4_Machine%20Learning/auto-sklearn.html">Using auto-sklearn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_Machine%20Learning/end-to-end%20workflow.html">End-to-End workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4_Machine%20Learning/feature_importances.html">feature importances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../4_Machine%20Learning/WWCode%20NLP%20Workshop.html">WWCode NLP Workshop</a></li>
 </ul>
@@ -220,6 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/titanic-dataset.html">Titanic-dataset</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../10_Incubator/index.html">10 Incubator</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../11_Articles/index.html">Articles</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../11_Articles/ellalearns%20hello%20world.html">Hello World</a></li>
 </ul>
@@ -394,7 +400,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -410,6 +418,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-commands">Basic commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#undo-a-push-to-wrong-branch">Undo a push to wrong branch</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -422,7 +439,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="git-and-github">
 <h1>Git and Github<a class="headerlink" href="#git-and-github" title="Permalink to this heading">#</a></h1>
 <p>My notes on <code class="docutils literal notranslate"><span class="pre">git</span></code> goes here.</p>
-<p>Basic commands</p>
+<section id="basic-commands">
+<h2>Basic commands<a class="headerlink" href="#basic-commands" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">&lt;url-to-remote-repo&gt;</span> <span class="pre">.</span></code>
 while in the directory <code class="docutils literal notranslate"><span class="pre">&lt;current</span> <span class="pre">dir&gt;</span></code>, clone the linked repo to <code class="docutils literal notranslate"><span class="pre">&lt;current</span> <span class="pre">dir&gt;</span></code></p></li>
@@ -431,6 +449,33 @@ show current branch and status of files in the directory</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code>
 push to remote <code class="docutils literal notranslate"><span class="pre">&lt;origin&gt;</span></code> repo the local <code class="docutils literal notranslate"><span class="pre">&lt;master&gt;</span></code> branch into the similarly named remote branch</p></li>
 </ul>
+</section>
+<section id="undo-a-push-to-wrong-branch">
+<h2>Undo a push to wrong branch<a class="headerlink" href="#undo-a-push-to-wrong-branch" title="Permalink to this heading">#</a></h2>
+<p>Problem: Edited file while in wrong branch and pushed to origin. Result as in image.</p>
+<p><img alt="Code 0531-1120" src="https://github.com/ellacharmed/today-I-learned/assets/6437860/bb67f2f9-1916-4c66-9332-44da7057f730" />
+Initial state</p>
+<figure class="align-left" id="id1">
+<a class="reference internal image-reference" href="https://github.com/ellacharmed/today-I-learned/assets/6437860/bb67f2f9-1916-4c66-9332-44da7057f730"><img alt="https://github.com/ellacharmed/today-I-learned/assets/6437860/bb67f2f9-1916-4c66-9332-44da7057f730" src="https://github.com/ellacharmed/today-I-learned/assets/6437860/bb67f2f9-1916-4c66-9332-44da7057f730" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Initial state</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><img alt="Code 0531-1121" src="https://github.com/ellacharmed/today-I-learned/assets/6437860/ba2148bc-ff1c-4cb8-bb06-9b7332864452" /></p>
+<p>Solution:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">HEAD^</span></code> would</p></li>
+<li><p>then do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-f</span> <span class="pre">origin</span> <span class="pre">&lt;last_known_good_commit&gt;:&lt;branch_name&gt;</span></code> to push the named commit to <code class="docutils literal notranslate"><span class="pre">origin</span></code> which means</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-f</span> <span class="pre">origin</span> <span class="pre">d7ed56b4:hmwk-2</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">--rebase</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">main</span></code></p></li>
+</ol>
+<p>NOTE: do not merge a branch if there’s a PR still pending!
+Eg: ella’s notes on <code class="docutils literal notranslate"><span class="pre">#mlops-zoomcamp</span></code> <em>module 01-intro</em> is rejected after I merge all WIP hmwk-# branches into <code class="docutils literal notranslate"><span class="pre">main</span></code></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -491,6 +536,21 @@ push to remote <code class="docutils literal notranslate"><span class="pre">&lt;
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-commands">Basic commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#undo-a-push-to-wrong-branch">Undo a push to wrong branch</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

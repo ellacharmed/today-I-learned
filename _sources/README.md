@@ -15,7 +15,8 @@ kernelspec:
 
 # today-I-learned
 
-Notes of lessons as I attempt to qualify for AIAP, using jupyter-book.
+Notes of lessons as I attempt to qualify for AIAP, made with [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://ellacharmed.github.io/today-I-learned/).
+
 
 ## Experiment One
 

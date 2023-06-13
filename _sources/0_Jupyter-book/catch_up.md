@@ -17,7 +17,7 @@ kernelspec:
 
 ## publish to github pages
 
-Caveat to using gh-pages: `main` repo must be public. see [[jb Commands Compilation]]
+Caveat to using gh-pages: `main` (aka `master`) branch in repo must be public. see [](commands.md)
 
 1. Generate toc `jupyter-book toc from-project . > _toc.yml`
 1. Remove sections from _toc to be kept private (confidential, sensitive data or private projects)
@@ -49,7 +49,7 @@ The TOC has a line stating `jb-book` and `jb-article`.
   - TODO Is there a way to auto-exclude like .gitignore and .dockerignore?
   - docs show {toggle} and other directives for {cell} to be toggle-ble or hidden but not for whole chapters and files. Need more research
 - or craft it manually each time a new file is created. Tedious process if add multiple files in a day
-- rename landing.md to index.md so each 'parent' Section header has some text description to explain its purpose and it's automatically picked up. No need to explicitly include the 'index.md' file in _toc
+- TIP rename landing.md to index.md so each 'parent' Section header has some text description to explain its purpose and it's automatically picked up. No need to explicitly include the 'index.md' file in _toc
 
 ## the _config.yml
 
@@ -68,7 +68,7 @@ The TOC has a line stating `jb-book` and `jb-article`.
 ```{important}
 For graph to work, files need to be connected to each other.
 
-For connections to happen, need to use links (aka references). See [](#how-to-add-linksreferences)
+For connections to happen, need to use links (aka references). See #how-to-add-references
 ```
 
 `ctrl+shitft+p` -> `Show graph`
@@ -77,13 +77,67 @@ For connections to happen, need to use links (aka references). See [](#how-to-ad
 
 ## Why jupyter-book?
 
-* [[JupyterBook vs READMEs vs Wikis]]
+* [](jupyterbook-vs)
 * [MySt cheatsheet](https://jupyterbook.org/en/stable/reference/cheatsheet.html)
 
 ## How to add notes in Margins
 
-[](marginalia)
+[](marginalia.md)
 
 ## How to add references
 
-[](jupyterbook-vs#ways-of-linking-in-jupyterbook)
+[](jupyterbook-vs.md#ways-of-linking-in-jupyterbook)
+
+## auto-build and deploy upon `git push origin main`
+
+```{topic}
+> Can you provide sample code to auto deploy and then build jupyter-book with github actions whenever I push code to - my repo `https://github.com/ellacharmed/today-I-learned/` master branch - located in following path `/home/ubuntu/repos/jupyterbook/today-I-learned` on my local machine - so that the jupyter-book gets build to `_build` subfolder and then published to `https://ellacharmed.github.io/today-I-learned/` ?
+
+```{admonition} BingChat's answer
+> To set up a GitHub Action for auto-deployment and building of Jupyter-Book, you can create a new file at `.github/workflows/documentation.yaml` in your repository with the necessary contents to trigger a GitHub Action to rebuild the documentation each time you push to the repository. The documentation can then be pushed to a separate branch called `gh-pages` [^web page context^].
+
+Here is an example `documentation.yaml` file that you can use as a starting point:
+
+
+
+```{code-block} python
+name: Build and Deploy Jupyter-Book
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Build Jupyter-Book
+      run: |
+        jupyter-book build /home/ubuntu/repos/jupyterbook/today-I-learned
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: /home/ubuntu/repos/jupyterbook/today-I-learned/_build/html
+```
+```
+```
+
+This workflow file specifies that the action should be triggered on a push to the `master` branch. It checks out the repository, sets up Python, installs dependencies from `requirements.txt`, builds the Jupyter-Book using the `jupyter-book build` command, and deploys the built book to GitHub Pages using the `peaceiris/actions-gh-pages` action.
+
+You can adapt this example to fit your specific needs by changing the paths and commands as necessary. Once you have created and pushed this file to your repository, the action should be triggered automatically on each push to the `master` branch.
+
+Is there anything else you would like to know?
+

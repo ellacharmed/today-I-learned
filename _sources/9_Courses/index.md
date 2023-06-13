@@ -39,3 +39,6 @@ This chapter collects all the Courses I'm currently learning from or have comple
   - TODO [Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp)
   - TODO [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
   - TODO [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- [The Open Source Data Science Masters](http://datasciencemasters.org/)
+- [Software Carpentry workshops](https://software-carpentry.org/lessons/)
+- [CodeRefinery.org](https://coderefinery.org/)

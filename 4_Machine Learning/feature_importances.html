@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>feature importances &#8212; EllaLearns</title>
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="WWCode NLP Workshop" href="WWCode%20NLP%20Workshop.html" />
-    <link rel="prev" title="Using auto-sklearn" href="auto-sklearn.html" />
+    <link rel="prev" title="End-to-End workflow" href="end-to-end%20workflow.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,10 +168,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20intro.html">Welcome to your Jupyter Book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20markdown.html">Markdown Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/sample%20markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../0_Jupyter-book/todo_tree.html">Configuration for TODO extension</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../1_Meta/index.html">Meta</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../1_Meta/0_LearningHowToLearn.html">Learning How to Learn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_Meta/mega_glossary.html">Mega glossary of topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../1_Meta/storytelling.html">Storytelling with data</a></li>
 </ul>
 </li>
@@ -179,8 +181,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/0_swe.html">Software Engineering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/1_git.html">Git and Github</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/folder_structure.html">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/git_worktree.html">Git Worktree according to BingChat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/move_docker_distro_location.html">Move location of Docker containers in WSL2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/move_wsl_distro.html">Move location of distro in WSL2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/packaging_packages.html">How to update packages and install locally</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_Fundamentals/sharing_data.html">Sharing data across notebooks, scripts</a></li>
 </ul>
 </li>
@@ -197,6 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1_classification.html">Classification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2_regression.html">Regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="auto-sklearn.html">Using auto-sklearn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="end-to-end%20workflow.html">End-to-End workflow</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">feature importances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WWCode%20NLP%20Workshop.html">WWCode NLP Workshop</a></li>
 </ul>
@@ -220,6 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../9_Practicals/titanic-dataset.html">Titanic-dataset</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../10_Incubator/index.html">10 Incubator</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../11_Articles/index.html">Articles</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../11_Articles/ellalearns%20hello%20world.html">Hello World</a></li>
 </ul>
@@ -483,7 +489,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/647664c12ec6afbee6b58151b75aed79bfed2c534a6e09fe70e7ebcc98fd6026.png" src="../_images/647664c12ec6afbee6b58151b75aed79bfed2c534a6e09fe70e7ebcc98fd6026.png" />
+<img alt="../_images/ab82ade390b873d1bb60582e9cf55f0c5e2fbf487533b0163a18e4fc83a8153d.png" src="../_images/ab82ade390b873d1bb60582e9cf55f0c5e2fbf487533b0163a18e4fc83a8153d.png" />
 </div>
 </div>
 <p>This code uses the result object from the previous example and plots the feature importance scores using matplotlib .</p>
@@ -522,12 +528,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="auto-sklearn.html"
+       href="end-to-end%20workflow.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Using auto-sklearn</p>
+        <p class="prev-next-title">End-to-End workflow</p>
       </div>
     </a>
     <a class="right-next"
